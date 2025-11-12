@@ -1,0 +1,51 @@
+﻿<Window x:Class="Zachet_Mirzaeva.Windows.AuthorizationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zachet_Mirzaeva.Windows"
+        mc:Ignorable="d"
+        Title="AuthorizationWindow" 
+        ResizeMode="NoResize"
+        WindowStyle="None" WindowStartupLocation="CenterScreen"
+        Width="1600" Height="900">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*"/>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0.5*"/>
+                <RowDefinition Height="0.8*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Text="АВТОРИЗАЦИЯ" Grid.Column="1" Grid.Row="1" FontSize="50"/>
+
+            <TextBlock FontSize="43" Text="Почта" Grid.Column="1" Grid.Row="3"/>
+            <TextBox Grid.Column="1" Grid.Row="4"/>
+
+            <TextBlock  FontSize="43" Text="Пароль" Grid.Column="1" Grid.Row="6"/>
+            <TextBox Grid.Column="1" Grid.Row="7"/>
+
+
+            <Button Background="Black" Content="Вход" HorizontalAlignment="Left" Width="450" Grid.Column="1" Grid.Row="9" FontSize="40" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Window>
