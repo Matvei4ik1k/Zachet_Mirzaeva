@@ -7,91 +7,26 @@
         mc:Ignorable="d"
                Title="AuthorizationWindow" 
         WindowStyle="None" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
-        Height="450" Width="800">
-    <Grid>
+        Height="1080" Width="1920">
+    <Grid Background="White" >
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="400"/>
-            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="0.5*"/>
+            <ColumnDefinition Width="0.5*"/>
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50"/>
-                <ColumnDefinition Width="1*"/>
-                <ColumnDefinition Width="50"/>
-            </Grid.ColumnDefinitions>
+        <Border Grid.ColumnSpan="2" Margin="100 145" CornerRadius="30"  Background="Black"></Border>
+        
+        <!--<Border CornerRadius="30" Margin="108" Background="Black">
+            <Image Margin="20" Source="/Image/Home.jpg" Stretch="UniformToFill" />
+        </Border>-->
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="10"/>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="20"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="0"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="auto"/>
-                <RowDefinition Height="15"/>
-                <RowDefinition Height="auto"/>
+        <Image  Source="C:\Users\Admin\source\Repos\Matvei4ik1k\Zachet_Mirzaeva\Zachet_Mirzaeva\Image\Hotel on the lake (2560x2048) (1).jpg">
+            <Image.Clip>
+                <RectangleGeometry Rect="120,8,835,750" 
+                          RadiusX="20" 
+                          RadiusY="20"/>
+            </Image.Clip>
+        </Image>
 
-
-
-
-            </Grid.RowDefinitions>
-
-            <TextBlock FontWeight="Bold" Text="Регистрация" Grid.Column="1" Grid.Row="2" FontSize="30"/>
-
-            <TextBlock FontSize="20" Text="Имя" Grid.Column="1" Grid.Row="4"/>
-            <TextBox Grid.Column="1" Grid.Row="6"/>
-
-            <TextBlock  FontSize="20" Text="Почта" Grid.Column="1" Grid.Row="8"/>
-            <TextBox Grid.Column="1" Grid.Row="10"/>
-
-            <TextBlock FontSize="20" Text="Придумайте пароль" Grid.Column="1" Grid.Row="12"/>
-            <TextBox Grid.Column="1" Grid.Row="13"/>
-
-            <TextBlock  FontSize="20" Text="Повторите пароль" Grid.Column="1" Grid.Row="16"/>
-            <TextBox Grid.Column="1" Grid.Row="18"/>
-
-
-            <Button Background="Black" Content="Вход"  HorizontalAlignment="Center" Grid.Column="1" Grid.Row="20" FontSize="22" Width="250"  Foreground="White"/>
-
-            <Button Name="AuthorizationBtn" Click="AuthorizationBtn_Click" Background="Transparent" BorderBrush="Transparent" Content="Авторизоваться" Grid.Row="22" Grid.Column="1" FontSize="13" HorizontalAlignment="Center" Height="22" Grid.RowSpan="2" />
-
-        </Grid>
-
-        <Grid Grid.Column="0">
-            <Grid.Background>
-                <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-                    <GradientStop Color="#2E8B57" Offset="0"/>
-                    <GradientStop Color="#228B22" Offset="0.7"/>
-                </LinearGradientBrush>
-            </Grid.Background>
-
-            <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="40">
-
-                <Image Source="/Image/icons8-country-house-96.png"/>
-
-                <TextBlock Text="ЗАГОРОДНЫЙ КЛУБ" FontSize="28" FontWeight="Bold" Foreground="White" 
-                           HorizontalAlignment="Center" Margin="0,0,0,10" TextAlignment="Center"/>
-
-                <TextBlock Text="PREMIUM RESORT" FontSize="16" Foreground="#E0FFE0" 
-                           HorizontalAlignment="Center" Margin="0,0,0,30" FontStyle="Italic"/>
-
-
-            </StackPanel>
-        </Grid>
     </Grid>
 </Window>
