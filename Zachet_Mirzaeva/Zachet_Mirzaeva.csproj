@@ -112,5 +112,6 @@
   <ItemGroup>
     <Resource Include="Image\Hotel on the lake %282560x2048%29 %281%29.jpg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

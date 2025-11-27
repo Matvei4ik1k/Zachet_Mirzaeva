@@ -8,12 +8,11 @@
         mc:Ignorable="d"
         Title="Регистрация" 
         WindowStyle="None" 
+        WindowState="Maximized"    
         WindowStartupLocation="CenterScreen" 
         ResizeMode="NoResize"
         Height="1080" 
-        Width="1920"
-        GlowBrush="#FF2E86AB"
-        NonActiveGlowBrush="Gray">
+        Width="1920">
 
  
 
@@ -23,7 +22,6 @@
             <ColumnDefinition Width="0.4*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Левая часть - изображение -->
         <Grid Grid.Column="0">
             <Image Source="/Zachet_Mirzaeva;component/Image/Hotel on the lake (2560x2048) (1).jpg" 
                    Stretch="UniformToFill">
@@ -34,10 +32,8 @@
                 </Image.Clip>
             </Image>
 
-            <!-- Затемнение для лучшей читаемости -->
             <Rectangle Opacity="0.3" Fill="Black"/>
 
-            <!-- Текст на изображении -->
             <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Margin="100">
                 <TextBlock Text="Добро пожаловать" 
                            Foreground="White" 
@@ -52,31 +48,25 @@
             </StackPanel>
         </Grid>
 
-        <!-- Правая часть - форма регистрации -->
         <Border Grid.Column="1" Background="White" Margin="0,100,0,100">
             <ScrollViewer VerticalScrollBarVisibility="Auto">
                 <StackPanel Margin="50,30" VerticalAlignment="Center">
 
-                    <!-- Заголовок -->
                     <TextBlock Text="Создать аккаунт" 
                                FontSize="32" 
                                FontWeight="Bold" 
                                Foreground="#333333"
-                               Margin="0,0,0,30"/>
+                               Margin="0,0,0,50"/>
 
-                    <!-- Поля ввода -->
                     <TextBlock Text="Имя пользователя" 
-                               Foreground="#666666" 
-                               FontSize="14" 
-                               FontWeight="Medium"/>
-                    <TextBox x:Name="UsernameTextBox" />
+                               Foreground="#666666" />
+                    <TextBox />
 
 
                     <TextBlock Text="Email" 
                                Foreground="#666666" 
-                               FontSize="14" 
-                               FontWeight="Medium"/>
-                    <TextBox x:Name="EmailTextBox" 
+                              />
+                    <TextBox 
                                 Controls:TextBoxHelper.Watermark="example@mail.com"/>
 
                     <TextBlock Text="Пароль" 
@@ -88,42 +78,37 @@
 
                     <TextBlock Text="Подтверждение пароля" 
                                Foreground="#666666" 
-                               FontSize="14" 
+                               FontSize="16" 
                                FontWeight="Medium"/>
                     <PasswordBox x:Name="ConfirmPasswordBox" 
                                     Controls:TextBoxHelper.Watermark="Повторите пароль"/>
 
-                    <!-- Чекбокс соглашения -->
                     <CheckBox x:Name="AgreeCheckBox" 
                               Margin="0,10,0,30"
                               FontSize="14">
                         <TextBlock Text="Я принимаю условия пользовательского соглашения и политику конфиденциальности" 
                                    TextWrapping="Wrap"
-                                   Foreground="#666666"/>
+                                   Foreground="#666666" FontSize="14"/>
                     </CheckBox>
 
-                    <!-- Кнопка регистрации -->
-                    <Button x:Name="RegisterButton" 
-                            Content="Зарегистрироваться" 
-                            />
-
-                    <!-- Разделитель -->
+                    <Border Background="LightGray" CornerRadius="8" Padding="10 0">
+                    <Button BorderBrush="Transparent" Background="Transparent" Content="Зарегистрироваться" />
+                    </Border>
+                    
                     <Border Height="1" Background="#EEEEEE" Margin="0,30,0,20"/>
 
-                    <!-- Уже есть аккаунт -->
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                         <TextBlock Text="Уже есть аккаунт?" 
                                    Foreground="#666666" 
                                    FontSize="14"/>
-                        <Button x:Name="LoginButton" 
-                                Content="Войти" 
+                        <Button Content="Войти" 
                                 Margin="10,0,0,0"
                                 Padding="20,0"
                              />
                     </StackPanel>
 
-                    <!-- Кнопка закрытия -->
-                    <Button x:Name="CloseButton" 
+                    <Border CornerRadius="20">
+                    <Button 
                             Content="✕" 
                             Width="30" 
                             Height="30" 
@@ -135,6 +120,7 @@
                             VerticalAlignment="Top"
                             Margin="0,-20,0,0"
                             Cursor="Hand"/>
+                    </Border>
                 </StackPanel>
             </ScrollViewer>
         </Border>
