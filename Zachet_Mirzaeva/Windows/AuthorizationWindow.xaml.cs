@@ -15,20 +15,18 @@ using System.Windows.Shapes;
 namespace Zachet_Mirzaeva.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для RegistrationWindow.xaml
+    /// Логика взаимодействия для AuthorizationWindow.xaml
     /// </summary>
-    public partial class RegistrationWindow : Window
+    public partial class AuthorizationWindow : Window
     {
-        public RegistrationWindow()
+        public AuthorizationWindow()
         {
             InitializeComponent();
         }
 
-        private void AuthorizationBtn_Click(object sender, RoutedEventArgs e)
+        private void RegistrationBtn_Click(object sender, RoutedEventArgs e)
         {
-            AuthorizationWindow authorizationWindow = new AuthorizationWindow();
-            authorizationWindow.Show();
-            this.Close();
+
         }
     }
 }
