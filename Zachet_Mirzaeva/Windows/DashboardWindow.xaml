@@ -1,0 +1,246 @@
+﻿<Window x:Class="Zachet_Mirzaeva.View.Windows.DashboardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Zachet_Mirzaeva.View.Windows"
+        mc:Ignorable="d"
+            Title="Alpine Peak Resort"
+        WindowState="Maximized"
+        WindowStyle="None"
+        Background="#0A0A0A">
+
+    <Window.Resources>
+        <Style x:Key="NavButton" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="#CCCCCC"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="FontSize" Value="13"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Padding" Value="25,15"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="White"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="GlassCard" TargetType="Border">
+            <Setter Property="Background" Value="#151515"/>
+            <Setter Property="BorderBrush" Value="#252525"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="CornerRadius" Value="12"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <!-- Main Layout -->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top Navigation - Minimal -->
+        <Border Grid.Row="0" Background="#0F0F0F" BorderBrush="#1A1A1A" BorderThickness="0,0,0,1">
+            <Grid Margin="40,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Logo -->
+                <TextBlock Grid.Column="0" 
+                          Text="ALPINE PEAK" 
+                          Foreground="White" 
+                          FontSize="16" 
+                          FontWeight="SemiBold"
+                          VerticalAlignment="Center"
+                          FontFamily="Segoe UI"/>
+
+                <!-- Central Navigation -->
+                <StackPanel Grid.Column="1" 
+                           Orientation="Horizontal" 
+                           HorizontalAlignment="Center" 
+                           VerticalAlignment="Center">
+                    <Button Content="Туры" Style="{StaticResource NavButton}"/>
+                    <Button Content="События" Style="{StaticResource NavButton}"/>
+                    <Button Content="Тренировки" Style="{StaticResource NavButton}"/>
+                    <Button Content="Уроки" Style="{StaticResource NavButton}"/>
+                </StackPanel>
+
+                <!-- User Menu -->
+                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button Content="Профиль" Style="{StaticResource NavButton}" FontWeight="SemiBold"/>
+                    <Rectangle Width="1" Height="20" Fill="#252525" Margin="15,0"/>
+                    <Button Content="Выход" Style="{StaticResource NavButton}" Foreground="#666"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- Hero Section -->
+        <Grid Grid.Row="1" Margin="40">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <!-- Main Heading -->
+            <TextBlock Grid.Row="0"
+                      Text="Идеальный зимний&#10;день&#10;начинается здесь"
+                      FontSize="40"
+                      Foreground="White"
+                      FontWeight="Light"
+                      FontFamily="Segoe UI Light"
+                      TextAlignment="Center"
+                      LineHeight="56"
+                      Margin="0,0,0,30">
+                <TextBlock.Effect>
+                    <DropShadowEffect ShadowDepth="0" BlurRadius="30" Color="#2A5C8F" Opacity="0.3"/>
+                </TextBlock.Effect>
+            </TextBlock>
+
+            <!-- Content Grid -->
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <!-- Mountain Forests Card -->
+                <Border Grid.Column="0" Style="{StaticResource GlassCard}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="280"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Image Container -->
+                        <Border Grid.Row="0" CornerRadius="12,12,0,0" ClipToBounds="True">
+                            <Image Source="/Zachet_Mirzaeva;component/Image/Forest.jpg" 
+                                   Stretch="UniformToFill"
+                                   Opacity="0.9">
+                                <Image.Effect>
+                                    <BlurEffect Radius="0.5"/>
+                                </Image.Effect>
+                            </Image>
+                        </Border>
+
+                        <!-- Content -->
+                        <StackPanel Grid.Row="1" Margin="25">
+                            <TextBlock Text="MOUNTAIN FORESTS" 
+                                      Foreground="White" 
+                                      FontSize="18" 
+                                      FontWeight="SemiBold"
+                                      Margin="0,0,0,8"/>
+                            <TextBlock Text="Discover pristine trails through ancient pine forests and experience nature in its purest form."
+                                      Foreground="#999" 
+                                      FontSize="13" 
+                                      LineHeight="18"
+                                      TextWrapping="Wrap"
+                                      Margin="0,0,0,20"/>
+
+                            <StackPanel Orientation="Horizontal" Margin="12">
+                                <Border Background="#1A5C8F" CornerRadius="6" Padding="12,8">
+                                    <TextBlock Text="EXPLORE" 
+                                              Foreground="White" 
+                                              FontSize="11" 
+                                              FontWeight="SemiBold"
+                                              Cursor="Hand"/>
+                                </Border>
+                                <Border Background="Transparent" CornerRadius="6" Padding="12,8" BorderBrush="#333" BorderThickness="1">
+                                    <TextBlock Text="VIEW MAP" 
+                                              Foreground="#999" 
+                                              FontSize="11" 
+                                              FontWeight="Medium"
+                                              Cursor="Hand"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <!-- Snow Slopes Card -->
+                <Border Grid.Column="2" Style="{StaticResource GlassCard}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="280"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <!-- Image Container -->
+                        <Border Grid.Row="0" CornerRadius="12,12,0,0" ClipToBounds="True">
+                            <Image Source="/Zachet_Mirzaeva;component/Image/Snow.jpg" 
+                                   Stretch="UniformToFill"
+                                   Opacity="0.9">
+                                <Image.Effect>
+                                    <BlurEffect Radius="0.5"/>
+                                </Image.Effect>
+                            </Image>
+                        </Border>
+
+                        <!-- Content -->
+                        <StackPanel Grid.Row="1" Margin="25">
+                            <TextBlock Text="ALPINE SLOPES" 
+                                      Foreground="White" 
+                                      FontSize="18" 
+                                      FontWeight="SemiBold"
+                                      Margin="0,0,0,8"/>
+                            <TextBlock Text="Challenge yourself on world-class slopes with perfectly groomed snow and breathtaking mountain views."
+                                      Foreground="#999" 
+                                      FontSize="13" 
+                                      LineHeight="18"
+                                      TextWrapping="Wrap"
+                                      Margin="0,0,0,20"/>
+
+                            <StackPanel Orientation="Horizontal" Margin="12">
+                                <Border Background="#1A5C8F" CornerRadius="6" Padding="12,8">
+                                    <TextBlock Text="BOOK NOW" 
+                                              Foreground="White" 
+                                              FontSize="11" 
+                                              FontWeight="SemiBold"
+                                              Cursor="Hand"/>
+                                </Border>
+                                <Border Background="Transparent" CornerRadius="6" Padding="12,8" BorderBrush="#333" BorderThickness="1">
+                                    <TextBlock Text="CONDITIONS" 
+                                              Foreground="#999" 
+                                              FontSize="11" 
+                                              FontWeight="Medium"
+                                              Cursor="Hand"/>
+                                </Border>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+
+        <!-- Bottom Status Bar -->
+        <Border Grid.Row="1" 
+                VerticalAlignment="Bottom" 
+                HorizontalAlignment="Center"
+                Background="#0F0F0F"
+                BorderBrush="#1A1A1A"
+                BorderThickness="1"
+                CornerRadius="20"
+                Margin="0,0,0,30"
+                Padding="25,12">
+            <StackPanel Orientation="Horizontal" Margin="30">
+                <StackPanel Orientation="Horizontal" Margin="8">
+                    <Ellipse Width="8" Height="8" Fill="#4CAF50" VerticalAlignment="Center"/>
+                    <TextBlock Text="12/15 SLOPES OPEN" Foreground="#CCCCCC" FontSize="11"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="8">
+                    <Ellipse Width="8" Height="8" Fill="#2196F3" VerticalAlignment="Center"/>
+                    <TextBlock Text="PERFECT CONDITIONS" Foreground="#CCCCCC" FontSize="11"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="8">
+                    <Ellipse Width="8" Height="8" Fill="#FF9800" VerticalAlignment="Center"/>
+                    <TextBlock Text="-8°C | FRESH SNOW" Foreground="#CCCCCC" FontSize="11"/>
+                </StackPanel>
+            </StackPanel>
+        </Border>
+    </Grid>
+</Window>
